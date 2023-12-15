@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    font-size: 70px;
+    font-style: italic;
+}
+
+h3{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.icon-container{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-container > img{
+    cursor: pointer;
+    padding: 2rem;
+}
+
+.icon{
+    border: solid;
+    padding: 2em;
+    cursor: pointer;
+}
+
+.icon > p{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
