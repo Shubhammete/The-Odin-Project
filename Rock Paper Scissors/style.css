@@ -45,3 +45,15 @@ h3{
     align-items: center;
     
 }
+
+.status{
+    display: flex;
+    justify-content: space-around;
+}
+
+.status > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
