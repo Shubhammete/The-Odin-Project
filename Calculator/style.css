@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.output{
+    height: 50px;
+    width: 200px;
+    border: solid;
+    text-align: end;
+}
+
+.calc{
+    grid-column: span 2;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,1fr);
+    width: 200px;
+}
+
+.num{
+    padding: 1em;
+}
