@@ -1,13 +1,16 @@
+// default colors
 let DefaultColor = 'black'
 let DefaultMode = 'color'
 let DefaultSize = 16
 
+// current colors
 let currentColor = DefaultColor
 let currentMode = DefaultMode
 let currentSize = DefaultSize
-
+// grid element i.e div inside grid
 let gridElement
 
+// functions to set color mode and size
 function setColor(newColor){
     currentColor = newColor
 }
@@ -23,7 +26,7 @@ function setSize(newSize){
     createGrid()
 }
 
-
+// selectin elements
 let main = document.querySelector(".pixel-container")
 let colorpicker = document.querySelector(".color-picker")
 let sizeroller = document.querySelector(".size-btn")
@@ -32,12 +35,13 @@ let rainbowbtn = document.querySelector(".rainbow-btn")
 let eraserbtn = document.querySelector(".eraser-btn")
 let clearbtn = document.querySelector(".clear-btn")
 
+// event listeners actions 
 colorpicker.oninput = (e)=>{setColor(e.target.value)}
 sizeroller.onchange = (e)=>{setSize(e.target.value)}
 colorbtn.onclick = ()=>{setMode('color')}
 eraserbtn.onclick = ()=>{setMode('eraser')}
 clearbtn.onclick = ()=>{setMode('clear')}
-rainbowbtn.onclick = ()=>{setMode('rainbow')}
+
 
 
 // create grid
@@ -64,15 +68,17 @@ function createGrid() {
         gridElement.addEventListener('mousedown', (e)=>{e.target.style.backgroundColor = currentColor})
         main.appendChild(gridElement)
       }
-      activatebutton()
+      
 }
 
 
 function activatebutton(){
     if(currentMode === 'color'){
-       currentColor = currentColor
+       currentColor = 'black '
     }else if(currentMode === 'eraser'){
        currentColor = 'white'
+    }else if(currentMode === 'clear'){
+        document.querySelectorAll('div').forEach(div=>div.style.backgroundColor = "white") 
     }
     
 }
